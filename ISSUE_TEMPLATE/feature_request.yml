@@ -1,0 +1,31 @@
+name: "Feature Request"
+description: Propose a new feature or an enhancement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What challenge does this feature address?
+      placeholder: Managing multiple accounts is confusing.
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: What is your suggested approach?
+      placeholder: Add support for grouping accounts by category.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Have you considered any other solutions?
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Notes
+      description: Any context, links, or screenshots that may help.

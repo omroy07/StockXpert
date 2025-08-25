@@ -1,0 +1,45 @@
+name: "Bug Report"
+description: Report unexpected behavior or broken functionality
+labels: [bug]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly explain the issue.
+      placeholder: The login form crashes when submitting valid credentials.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Error occurs
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should happen?
+      placeholder: User should be logged in.
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happens?
+      placeholder: The page shows a 500 error.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, or framework version where you observed the issue.
+      placeholder: Windows 11, Chrome 127, Node 20
