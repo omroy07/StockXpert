@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Fintech</h1>
+  </header>
+
+  <main>
+    <div class="dashboard-grid">
+
+      <!-- Stock Prediction -->
+      <div class="card">
+        <h2>Stock Prediction</h2>
+        <img src="image/stock.webp" alt="Stock Image">
+        <input type="text" id="stock-symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
+        <button onclick="fetchStockData()">Get Stock Data</button>
+        <div id="stock-data"></div>
+      </div>
+
+      <!-- Gold & Silver Prices -->
+      <div class="card">
+        <h2>Gold & Silver Prices</h2>
+        <img src="image/goldsilver.avif" alt="Gold Silver Image">
+        <div id="gold-price">Gold price will appear here</div>
+        <div id="silver-price">Silver price will appear here</div>
+        <button id="fetch-prices-btn">Predict & Fetch </button>
+        <div id="status-message" style="color: red;"></div>
+      </div>
+
+      <!-- SIP Calculator -->
+      <div class="card">
+        <h2>SIP Calculator</h2>
+        <img src="image/sip.avif" alt="SIP Image">
+        <label for="monthly">Monthly Investment (₹):</label>
+        <input type="number" id="monthly" placeholder="e.g., 5000" />
+        <label for="rate">Expected Annual Return (%):</label>
+        <input type="number" id="rate" placeholder="e.g., 12" />
+        <label for="years">Investment Duration (Years):</label>
+        <input type="number" id="years" placeholder="e.g., 10" />
+        <button onclick="calculateSIP()">Calculate</button>
+        <div id="sip-results"></div>
+      </div>
+
+      <!-- Mutual Fund Calculator -->
+      <div class="card">
+        <h2>Mutual Fund Calculator</h2>
+        <img src="image/mutualfund.avif" alt="MF Image">
+        <label for="mf-amount">Investment Amount (₹):</label>
+        <input type="number" id="mf-amount" placeholder="e.g., 100000" />
+        <label for="mf-rate">Expected Annual Return (%):</label>
+        <input type="number" id="mf-rate" placeholder="e.g., 10" />
+        <label for="mf-years">Investment Duration (Years):</label>
+        <input type="number" id="mf-years" placeholder="e.g., 5" />
+        <button onclick="calculateMF()">Calculate</button>
+        <div id="mf-results"></div>
+      </div>
+
+      <!-- Expense Calculator -->
+      <div class="card">
+        <h2>Expense Calculator</h2>
+        <img src="image/expense.avif" alt="Expense Image">
+        <label for="desc">Expense Description</label>
+        <input type="text" id="desc" placeholder="e.g. Groceries" />
+        <label for="amount">Amount ($)</label>
+        <input type="number" id="amount" placeholder="e.g. 25" min="0" step="0.01" />
+        <button id="addExpenseBtn">Add Expense</button>
+        <div id="expensesList"></div>
+        <div id="totalAmount">Total: $0.00</div>
+        <button class="clear-btn" id="clearExpensesBtn">Clear All Expenses</button>
+      </div>
+
+      <!-- Finance News -->
+      <div class="card">
+        <h2>Finance News</h2>
+        <img src="image/news.avif" alt="News Image">
+        <div id="news-articles">Loading news...</div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fintech Dashboard. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
